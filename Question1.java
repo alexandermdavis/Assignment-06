@@ -5,14 +5,13 @@ class Question1 {
 	public static void main(String args[]) {
 		int[] myArray = {81, 9, -1, 196, 52, 19, 59, -20};
 
-		Main driver = new Main();
-		driver.mergeSort(myArray, 0, myArray.length - 1);
+		mergeSort(myArray, 0, myArray.length - 1);
 
 		System.out.println("New Array:");
 		System.out.println(Arrays.toString(myArray));
 	}
 
-	void merge(int array[], int a, int b, int c) {
+	static void merge(int array[], int a, int b, int c) {
 		int size1 = b - a + 1;
 		int size2 = c - b;
 
@@ -52,7 +51,7 @@ class Question1 {
 		}
 	}
 
-	void mergeSort(int array[], int L, int R) {
+	static void mergeSort(int array[], int L, int R) {
 		if (L < R) {
 			int mid = (L + R) / 2;
 			mergeSort(array, L, mid);
